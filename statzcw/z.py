@@ -18,7 +18,7 @@ def mean(funlist: list) -> float:
     average = sum(funlist)/len(funlist)
     avg_val = int(average)
     return average
-    pass # escape pass
+    pass  # escape pass
 
 
 def mode(funlist: list) -> float:
