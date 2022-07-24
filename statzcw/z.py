@@ -24,7 +24,9 @@ def mean(funlist: list) -> float:
 def mode(funlist: list) -> float:
     # this might need lots of if statements
     # min(), len(),
-    pass
+    temp_set = set(funlist)
+    return max(temp_set, key=funlist.count)
+    pass  # escape pass
 
 
 def median(funlist: list) -> float:
@@ -38,6 +40,7 @@ def median(funlist: list) -> float:
 
 
 def variance(funlist: list) -> float:
+
     pass
 
 
