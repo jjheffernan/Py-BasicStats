@@ -37,9 +37,18 @@ class test_z(unittest.TestCase):
         pass
 
     def test_stddev(self):
+        # test_list = [4, 5, 8, 9, 10]
+
         pass
 
     def test_stderr(self):
+        # data = [3, 4, 4, 5, 7, 8, 12, 14, 14, 15, 17, 19, 22, 24, 24, 24, 25, 28, 28, 29]
+        # data = [3, 4, 4, 5, 7, 8, 12, 14, 14, 15, 17, 19, 22, 24, 24, 24, 25, 28, 28, 150]
+        pass
+
+    def test_covariance(self):
+        # x_coordinates = [1, 2, 3, 4, 5]
+        # y_coordinates = [1, 2, 3, 4, 5]
         pass
 
     def test_corr(self):
