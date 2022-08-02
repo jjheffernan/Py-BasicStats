@@ -82,8 +82,8 @@ class testZ(unittest.TestCase):
         # test_list = [6, 7, 3, 9, 10, 15]
         # expected results
         test_cases = [
-            ((), 0),
-            ((), 0),
+            ([6, 7, 3, 9, 10, 15], 0),
+            ([1, 2, 3, 6, 9, 15], 0),
             ((), 0),
         ]
 
@@ -97,7 +97,7 @@ class testZ(unittest.TestCase):
         # test_list = [4, 5, 8, 9, 10]
         # expected results
         test_cases = [
-            ((), 0),
+            ([4, 5, 8, 9, 10], 0),
             ((), 0),
             ((), 0),
         ]
@@ -113,8 +113,8 @@ class testZ(unittest.TestCase):
         # data = [3, 4, 4, 5, 7, 8, 12, 14, 14, 15, 17, 19, 22, 24, 24, 24, 25, 28, 28, 150]
         # expected results
         test_cases = [
-            ((), 0),
-            ((), 0),
+            ([3, 4, 4, 5, 7, 8, 12, 14, 14, 15, 17, 19, 22, 24, 24, 24, 25, 28, 28, 29], 0),
+            ([3, 4, 4, 5, 7, 8, 12, 14, 14, 15, 17, 19, 22, 24, 24, 24, 25, 28, 28, 150], 0),
             ((), 0),
         ]
 
@@ -129,9 +129,9 @@ class testZ(unittest.TestCase):
         # y_coordinates = [1, 2, 3, 4, 5]
         # expected results
         test_cases = [
-            ((), 0),
-            ((), 0),
-            ((), 0),
+            ([1, 2, 3, 4, 5], [1, 2, 3, 4, 5], 1),
+            ((2, 1), (1, 2), 0.5),
+            ((2, 1, 2), (1, 2, 1),  0),
         ]
 
         expected = [item[1] for item in test_cases]
