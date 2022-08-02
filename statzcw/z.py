@@ -16,10 +16,12 @@ def count(funlist: list) -> float:
 
 def mean(funlist: list) -> float:
     global avg_val
-    average = sum(funlist)/len(funlist)
-    avg_val = int(average)
-    return average
-    pass  # escape pass
+    if len(funlist) != 0:
+        average = sum(funlist)/len(funlist)
+        avg_val = int(average)
+        return avg_val
+    else:
+        pass  # escape pass
 
 
 def mode(funlist: list) -> float:
