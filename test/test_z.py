@@ -29,17 +29,18 @@ class testZ(unittest.TestCase):
 
         # asserting when=then
         # for expected in test_cases:
-        expected = [item[1] for item in test_cases]
+        expected = [len(item[0]) for item in test_cases]
         # actual = len(test_cases[0])
         actual = statzcw.z.count([list(item[0]) for item in test_cases])
+        # actual here is not properly feeding values into count?
         self.assertEqual(expected, actual)
 
     def test_mean(self):
         # expected results
         test_cases = [
-            ((), 0),
-            ((), 0),
-            ((), 0),
+            ((1, 2, 3), 2),
+            ((0, 1), 0.5),
+            ((-10, -20, -30), -20),
         ]
 
         expected = [item[1] for item in test_cases]
@@ -53,9 +54,9 @@ class testZ(unittest.TestCase):
     def test_mode(self):
         # expected results
         test_cases = [
-            ((), 0),
-            ((), 0),
-            ((), 0),
+            ((10, 20, 30, 30), 30),
+            ((1, 1.0, 1.0, 1.0, 2), 1),
+            ((9, 2, 3, 9, 3, 0), [9, 3]),
         ]
 
         expected = [item[1] for item in test_cases]
@@ -67,9 +68,9 @@ class testZ(unittest.TestCase):
     def test_median(self):
         # expected results
         test_cases = [
-            ((), 0),
-            ((), 0),
-            ((), 0),
+            ((1, 2, 3, 4, 5), 3),
+            ((2, 4, 6, 8, 10), 6),
+            ((1, 10, 30, 90), [10, 30]),
         ]
 
         expected = [item[1] for item in test_cases]
@@ -98,7 +99,7 @@ class testZ(unittest.TestCase):
         # expected results
         test_cases = [
             ([4, 5, 8, 9, 10], 0),
-            ((), 0),
+            ((1, 1, 1, 1, 1, 1), 0),
             ((), 0),
         ]
 
@@ -134,7 +135,7 @@ class testZ(unittest.TestCase):
             ((2, 1, 2), (1, 2, 1),  0),
         ]
 
-        expected = [item[1] for item in test_cases]
+        expected = [len(test_cases[0]) for item in test_cases]
 
         actual = statzcw.z.mean(test_cases)
         self.assertEquals(expected, actual)
